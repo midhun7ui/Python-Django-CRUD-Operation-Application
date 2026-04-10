@@ -1,0 +1,15 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %}Sucess{% endblock title %}
+
+{% block content %}
+
+<h1 class="sucess_heading">Success</h1>
+
+<div>
+
+    <button class="btn_class"><a href="{% url 'student_list' %}">Go Back</a></button>
+
+</div>
+{% endblock content %}

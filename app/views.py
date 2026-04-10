@@ -34,7 +34,7 @@ class AddStudent(View):
         if form.is_valid():
             form.save()
 
-            return redirect("student_list")
+            return render(request, "app/success.html")
         else:
             return HttpResponse("Failed")
 
