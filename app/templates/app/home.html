@@ -1,0 +1,18 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{%block title%}title{%endblock title%}
+
+{% block content %}
+<h1>Home page</h1>
+
+<h2>param = {{ name }}</h2>
+
+<h3>Routs</h3>
+
+<button><a href="{% url 'settings' %}?name=midhun">Settings</a></button>
+
+<div>
+    <img src="{% static 'app/images/image.png' %}" alt="" width="300" height="300">
+</div>
+{% endblock content %}

@@ -1,0 +1,29 @@
+{% extends 'app/base.html' %}
+
+{% block title %}Student List{% endblock title %}
+
+{% block content %}
+<h1>
+   Student List
+</h1>
+<table border="1" style="border-collapse: collapse; width: 80%;">
+    <thead>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Place</th>
+        <th>Cource</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+        {% for student in students %}
+        <tr>
+            <td>{{student.name}}</td>
+            <td>{{student.age}}</td>
+            <td>{{student.place}}</td>
+            <td>{{student.cource.name}}</td>
+            <td><a href="{% url 'edit_student' student.id %}">Edit</a> / <a href="{% url 'delete_student' student.id %}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}
